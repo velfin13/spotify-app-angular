@@ -10,11 +10,4 @@
   </div>
 </div>
 
-<div class="card-columns mt-4">
-  <div class="card" *ngFor="let resultado of buscador">
-    <img [src]="resultado.images | noimage" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">{{ resultado.name }}</h5>
-    </div>
-  </div>
-</div>
+<app-tarjetas [items]="buscador"></app-tarjetas>

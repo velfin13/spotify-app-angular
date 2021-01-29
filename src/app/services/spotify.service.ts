@@ -8,13 +8,12 @@ import { map } from 'rxjs/operators';
 })
 export class SpotifyService {
   constructor(private http: HttpClient) {
-    console.log('servicio listo spotify');
   }
 
   getUrl(query: string) {
     const url = `https://api.spotify.com/v1/${query}`;
     const tokens =
-      'BQBJtmDiLTNU6_tEUddXvC2yYpWk9JrONyDnZFNQcyjYyWyvTxXVkTK7QU7bRFCVXsL57RBpQFE0dSlJGBg0m0Dpieg_DPdOs5f6fBeKClvYdRce9tj9yOOlhLF_7Z0jxqbU8eLspFojfW44GMX8z5D66QTZRDQ';
+      'BQD2rXsFx1SncJWW3TZg-1s_NJYrde-3qg5aC-jJjWSJn05awuahywWxYnNfwUEAfTs11tttGcz-NEi_pOjocvQEUPXFz81u261yQBZSluI7wi5YwjEK0E1TC8sn68XKeRRiwlnPPsvgNVifS2BtDiK-6Y7ME8U';
     const headers = new HttpHeaders({
       Authorization: `Bearer ${tokens}`,
     });

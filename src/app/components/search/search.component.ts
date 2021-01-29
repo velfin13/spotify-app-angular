@@ -16,7 +16,6 @@ export class SearchComponent implements OnInit {
 
   buscar(termino: string) {
     this.busqueda.getBusqueda(termino).subscribe((data:any) => {
-      console.log(data);
       this.buscador = data;
     });
   }
