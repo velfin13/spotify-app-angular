@@ -10,4 +10,5 @@
   </div>
 </div>
 
-<app-tarjetas [items]="buscador"></app-tarjetas>
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="buscador"></app-tarjetas>
