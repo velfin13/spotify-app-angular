@@ -33,10 +33,26 @@
       </thead>
       <tbody>
         <tr *ngFor="let topTrack of topTracks">
-          <td><img [src]="topTrack.album.images | noimage" alt="{{topTrack.nme}}" class="img-thumb"></td>
-          <td>{{topTrack.album.name}}</td>
-          <td>{{topTrack.name}}</td>
-          <td><audio [src]="topTrack.preview_url" controls></audio></td>
+          <td>
+            <img
+              [src]="topTrack.album.images | noimage"
+              alt="{{ topTrack.nme }}"
+              class="img-thumb"
+            />
+          </td>
+          <td>{{ topTrack.album.name }}</td>
+          <td>{{ topTrack.name }}</td>
+          <td>
+            <!-- <audio [src]="topTrack.preview_url" controls></audio> -->
+            <iframe
+              [src]="topTrack.uri |domseguro:'https://open.spotify.com/embed?uri='"
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </td>
         </tr>
       </tbody>
     </table>
